@@ -6,7 +6,7 @@
 /*   By: ytaya <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 11:05:28 by ytaya             #+#    #+#             */
-/*   Updated: 2021/11/07 14:53:07 by ytaya            ###   ########.fr       */
+/*   Updated: 2021/11/08 12:00:04 by ytaya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		while (*lst)
 		{
 			temp = (*lst)->next;
-			ft_lstdelone(*lst,del);
+			ft_lstdelone(*lst, del);
 			*lst = temp;
 		}
 		lst = NULL;

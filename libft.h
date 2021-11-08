@@ -6,7 +6,7 @@
 /*   By: ytaya <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:14:55 by ytaya             #+#    #+#             */
-/*   Updated: 2021/11/07 10:48:56 by ytaya            ###   ########.fr       */
+/*   Updated: 2021/11/08 20:38:56 by ytaya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
