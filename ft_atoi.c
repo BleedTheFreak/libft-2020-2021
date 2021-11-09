@@ -37,7 +37,7 @@ int	ft_atoi(const char *nptr)
 	n = i;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 		number = number * 10 + (nptr[i++] - 48);
-	if (i - n <= 19  && number < LLONG_MAX)
+	if (i - n <= 19  && number <= LLONG_MAX)
 		return (((int)number) * sign);
 	return (ft_trinary(sign < 0, 0, -1));
 }
