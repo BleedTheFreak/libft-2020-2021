@@ -21,7 +21,7 @@ static int	ft_trinary(bool check, int t, int f)
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned long long	number;
+	unsigned long long			number;
 	int					sign;
 	int					i;
 	int					n;
@@ -37,12 +37,7 @@ int	ft_atoi(const char *nptr)
 	n = i;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 		number = number * 10 + (nptr[i++] - 48);
-	if ((i - n) == 19)
-		if ((sign == 1 && number > (unsigned long long)9223372036854775807)
-			|| (sign == -1
-				&& number - 1 > (unsigned long long)9223372036854775807))
-			i++;
-	if ((i - n) > 19)
-		return (ft_trinary(sign < 0, 0, -1));
-	return (((int)number) * sign);
+	if (i - n <= 19  && number < LLONG_MAX)
+		return (((int)number) * sign);
+	return (ft_trinary(sign < 0, 0, -1));
 }
